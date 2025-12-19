@@ -1,8 +1,8 @@
 namespace shose
 {
-    public partial class Form1 : Form
+    public partial class Formlogin : Form
     {
-        public Form1()
+        public Formlogin()
         {
             InitializeComponent();
         }

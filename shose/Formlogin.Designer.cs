@@ -1,6 +1,6 @@
 ﻿namespace shose
 {
-    partial class Form1
+    partial class Formlogin
     {
         /// <summary>
         ///  Required designer variable.
@@ -19,6 +19,7 @@
             }
             base.Dispose(disposing);
         }
+          ///
 
         #region Windows Form Designer generated code
 
@@ -28,10 +29,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            SuspendLayout();
+            // 
+            // Formlogin
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Text = "Form1";
+            ClientSize = new Size(434, 361);
+            Name = "Formlogin";
+            Text = "Авиаризация";
+            ResumeLayout(false);
         }
 
         #endregion
