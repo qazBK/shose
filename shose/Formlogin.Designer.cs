@@ -96,7 +96,6 @@
             lbPaissword.Size = new Size(69, 21);
             lbPaissword.TabIndex = 1;
             lbPaissword.Text = "Пароль";
-            lbPaissword.Click += label2_Click;
             // 
             // lbLogin
             // 
@@ -140,6 +139,7 @@
             // 
             AutoScaleDimensions = new SizeF(11F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(384, 411);
             Controls.Add(pbLogo);
             Controls.Add(panel1);

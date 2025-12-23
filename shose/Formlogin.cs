@@ -12,18 +12,22 @@ namespace shose
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void BtnGuest_Click(object sender, EventArgs e)
         {
             IsGuest = true;
-            CurrentUser = null;
+            FormMenu form = new FormMenu(CurrentUser, IsGuest);
+            if (this.WindowState == FormWindowState.Maximized)
+            { form.WindowState = FormWindowState.Maximized; }
 
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+            form.Show();
+
+            this.Hide();
+
+            textLogin.Clear();
+            textPaissword.Clear();
+
+            // Когда MainForm закроется, закрыть и FormStart
+            form.FormClosed += (s, args) => this.Show();
         }
 
         private void BtnLogin_Click(object sender, EventArgs e)
@@ -40,13 +44,30 @@ namespace shose
 
                 if (user != null)
                 {
+
+                    
                     CurrentUser = user;
 
                     IsGuest = false;
 
-                    this.DialogResult = DialogResult.OK;
-                    this.Close();
+                    /*this.DialogResult = DialogResult.OK;
+                    this.Close();*/
 
+
+
+                    FormMenu form = new FormMenu(CurrentUser, IsGuest);
+                    if (this.WindowState == FormWindowState.Maximized)
+                    { form.WindowState = FormWindowState.Maximized; }
+
+                    form.Show();
+
+                    this.Hide();
+
+                    textLogin.Clear();
+                    textPaissword.Clear();
+
+                    // Когда MainForm закроется, закрыть и FormStart
+                    form.FormClosed += (s, args) => this.Show();
                 }
                 else
                 {

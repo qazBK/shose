@@ -159,13 +159,21 @@ namespace shose
 
         private void BtnLogut_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.Cancel;
-            this.Close();   
+            CurrentUser = null;
+
+            IsGuest = false;
+
+            this.Close();
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             base.OnFormClosing(e);
+        }
+
+        private void ButtonBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
