@@ -100,7 +100,7 @@ namespace shose
             {
                 if (product.IdOrder == order.Id)
                 {
-                    articleText += product.Product.Art + ",";
+                    articleText += product.Product.Art + ", ";
 
                 }
                 ;
@@ -108,7 +108,7 @@ namespace shose
             if (string.IsNullOrEmpty(articleText)) { return null; }
 
 
-            articleText.Remove(articleText.Length - 1);
+            articleText = articleText.Remove(articleText.Length -2)+"";
 
             return
             $"Артикул заказа: {articleText}" + Environment.NewLine +//--------
